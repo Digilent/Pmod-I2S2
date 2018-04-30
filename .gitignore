@@ -1,7 +1,8 @@
 # Dummy gitignore file
 
-/**/ip/**/*
-!/**/ip/**/*.xci
+/**/ip/*/*
+!/**/ip/*/*.xci
+#!/**/ip/**/.keep
 
 /proj/*
 !/proj/.keep
