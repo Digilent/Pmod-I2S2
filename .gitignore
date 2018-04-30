@@ -1,0 +1,7 @@
+# Dummy gitignore file
+
+/**/ip/**/*
+!/**/ip/**/*.xci
+
+/proj/*
+!/proj/.keep
