@@ -5,3 +5,5 @@
 
 /proj/*
 !/proj/.keep
+
+/repo/cache/*
