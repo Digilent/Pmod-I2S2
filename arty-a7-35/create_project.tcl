@@ -6,8 +6,7 @@ set brd_part "digilentinc.com:arty-a7-35:1.0"
 source ../scripts/create_project.tcl
 
 # Set top-level verilog parameters
-set_property generic NUMBER_OF_SWITCHES=4 [current_fileset]
-set_property generic RESET_POLARITY=0 [current_fileset]
+set_property generic {NUMBER_OF_SWITCHES=4 RESET_POLARITY=0} [current_fileset]
 
 # Make modifications to the project for the chosen board
 # Modify clk_wiz_0 IP for appropriate input clock frequency
