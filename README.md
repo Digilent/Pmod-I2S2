@@ -8,13 +8,13 @@ The table below describes how inputs and outputs to this demo are connected, dep
 
 | Board       | I2S2 Pmod Connector | Volume Input | Reset        |
 | ----------- | ------------------- | ------------ | ------------ |
-| [Arty A7-35](reference.digilentinc.com/reference/programmable-logic/arty-a7/start)  | JA                  | SW3-SW0      | RESET Button |
-| [Arty A7-100](reference.digilentinc.com/reference/programmable-logic/arty-a7/start) | JA                  | SW3-SW0      | RESET Button |
-| [Arty S7-25](reference.digilentinc.com/reference/programmable-logic/arty-s7/start)  | JA                  | SW3-SW0      | RESET Button |
-| [Arty S7-50](reference.digilentinc.com/reference/programmable-logic/arty-s7/start)  | JA                  | SW3-SW0      | RESET Button |
-| [Cora Z7-07S](reference.digilentinc.com/reference/programmable-logic/cora-z7/start) | JA                  | BTN0         | BTN1         |
-| [Cora Z7-10](reference.digilentinc.com/reference/programmable-logic/cora-z7/start)  | JA                  | BTN0         | BTN1         |
-| [Cmod S7-25](reference.digilentinc.com/reference/programmable-logic/cmod-s7/start)  | JA                  | BTN0         | BTN1         |
+| [Arty A7-35](https://reference.digilentinc.com/reference/programmable-logic/arty/start)  | JA                  | SW3-SW0      | RESET Button |
+| [Arty A7-100](https://reference.digilentinc.com/reference/programmable-logic/arty/start) | JA                  | SW3-SW0      | RESET Button |
+| [Arty S7-25](https://reference.digilentinc.com/reference/programmable-logic/arty-s7/start)  | JA                  | SW3-SW0      | RESET Button |
+| [Arty S7-50](https://reference.digilentinc.com/reference/programmable-logic/arty-s7/start)  | JA                  | SW3-SW0      | RESET Button |
+| [Cora Z7-07S](https://reference.digilentinc.com/reference/programmable-logic/cora-z7/start) | JA                  | BTN0         | BTN1         |
+| [Cora Z7-10](https://reference.digilentinc.com/reference/programmable-logic/cora-z7/start)  | JA                  | BTN0         | BTN1         |
+| [Cmod S7-25](https://reference.digilentinc.com/reference/programmable-logic/cmod-s7/start)  | JA                  | BTN0         | BTN1         |
 
 This project is formatted a little differently than the standard Digilent Github project.
 
