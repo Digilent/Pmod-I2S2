@@ -6,8 +6,8 @@ WARNING!!! This project is only supported in the 2017.4 version of Vivado.
 
 The table below describes how inputs and outputs to this demo are connected, depending on the development board used:
 
-| Board       | I2S2 Pmod Connector | Volume Input | Reset        |
-| ----------- | ------------------- | ------------ | ------------ |
+| Board (Resource Center Link) | I2S2 Pmod Connector | Volume Input | Reset        |
+| ---------------------------- | ------------------- | ------------ | ------------ |
 | [Arty A7-35](https://reference.digilentinc.com/reference/programmable-logic/arty/start)  | JA                  | SW3-SW0      | RESET Button |
 | [Arty A7-100](https://reference.digilentinc.com/reference/programmable-logic/arty/start) | JA                  | SW3-SW0      | RESET Button |
 | [Arty S7-25](https://reference.digilentinc.com/reference/programmable-logic/arty-s7/start)  | JA                  | SW3-SW0      | RESET Button |
