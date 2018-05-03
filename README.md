@@ -20,13 +20,13 @@ This project is formatted a little differently than the standard Digilent Github
 
 In order to program the project onto an FPGA:
 
-1. 	Download the latest release ZIP (not the source ZIP) for the target FPGA board from the repo's [releases page](https://github.com/artvvb/Pmod-I2S2/releases).
+1.  Download the latest release ZIP (not the source ZIP) for the target FPGA board from the repo's [releases page](https://github.com/artvvb/Pmod-I2S2/releases).
 
-2. 	Extract and open the downloaded ZIP. Double click on "I2S2.xpr". This will launch an archived version of the project, in which a bitstream has already been generated.
+2.  Extract and open the downloaded ZIP. Double click on "I2S2.xpr". This will launch an archived version of the project, in which a bitstream has already been generated.
 
-3. 	Open the Vivado Hardware Manager, select "Open Target", and find the target board.
+3.  Open the Vivado Hardware Manager, select "Open Target", and find the target board.
 
-4.  Program top.bit onto the target.
+4.  Program top.bit onto the target. This file can be found within the PmodI2S2/PmodI2S2.runs/impl_1 folder.
 	
 In order to open a Vivado project after cloning this repo:
 
