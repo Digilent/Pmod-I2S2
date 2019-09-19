@@ -4,11 +4,8 @@
 # This version of this script expects that brd_part has previously been set.
 # This does not currently handle IPI flow.
 
-if {[info exists ::create_path]} {
-	set dest_dir $::create_path
-} else {
-	set dest_dir [file normalize [file dirname [info script]]/../proj]
-}
+set dest_dir $::create_path
+
 puts "INFO: Creating new project in $dest_dir"
 cd $dest_dir
 
@@ -18,12 +15,7 @@ set board_name [get_property board_name $board_obj]
 set part [get_property part_name [get_board_components -of_objects $board_obj -filter "NAME =~ *part0*"]]
 
 # Set the reference directory for source file relative paths (by default the value is script directory path)
-set origin_dir ".."
-
-# Set the directory path for the original project from where this script was exported
-# may want to improve this by adding $board_name to the proj dir name
-set orig_proj_dir "[file normalize "$origin_dir/proj"]"
-
+set origin_dir [file dirname [info script]]/..
 set repo_dir $origin_dir/repo
 
 # # Set the board repo
