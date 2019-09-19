@@ -4,6 +4,9 @@
 # This version of this script expects that brd_part has previously been set.
 # This does not currently handle IPI flow.
 
+if {[file exists $::create_path] == 0} {
+	file mkdir $::create_path
+}
 set dest_dir $::create_path
 
 puts "INFO: Creating new project in $dest_dir"
@@ -63,14 +66,14 @@ update_ip_catalog -rebuild
 # Gather sources from shared and board-specific directories
 foreach src_dir [list $origin_dir/shared/src $origin_dir/$board_name/src] {
 	# Add conventional sources
-	add_files -quiet $src_dir/hdl
+	import_files -quiet $src_dir/hdl
 
 	# Add IPs
 	# TODO: handle IP containers files
-	add_files -quiet [glob -nocomplain $src_dir/ip/*/*.xci]
+	import_files -quiet [glob -nocomplain $src_dir/ip/*/*.xci]
 
 	# Add constraints
-	add_files -fileset constrs_1 -quiet $src_dir/constraints
+	import_files -fileset constrs_1 -quiet $src_dir/constraints
 }
 
 # Create 'synth_1' run (if not found)
@@ -104,5 +107,14 @@ set_property "steps.route_design.args.directive" "RuntimeOptimized" $obj
 
 # set the current impl run
 current_run -implementation [get_runs impl_1]
+
+# Update the clk_wiz_0 IP for the current version and board
+set old_vlnv [expr {[get_property VLNV [get_ipdefs -filter VLNV=~*:clk_wiz:*]] != [get_property IPDEF [get_ips clk_wiz_0]]}]
+set wrong_board [expr {$brd_part != [get_property BOARD [get_ips clk_wiz_0]]}]
+if {$old_vlnv || $wrong_board} {
+	report_ip_status -name ip_status 
+	upgrade_ip -vlnv [get_ipdefs -filter VLNV=~*:clk_wiz:*] [get_ips clk_wiz_0]
+	export_ip_user_files -of_objects [get_ips clk_wiz_0] -no_script -sync -force -quiet
+}
 
 puts "INFO: Project created:$proj_name"
