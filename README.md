@@ -1,6 +1,6 @@
 This project is a demonstration of the Pmod I2S2. It creates a pass-through from Line-In to the Line-Out jack. The audio data coming through this passthrough is scaled by the number of switches on the FPGA that are closed. All switches open means that the data stream will be muted. All switches closed means that the data stream will be at full volume. The audio volume scales linearly between these two points.
 
-In order to use this demo, a [Pmod I2S2](reference.digilentinc.com/reference/pmod/pmod-i2s2/start) and one of the Digilent FPGA development boards presented in the table below are required. In addition, headphones or speakers and an audio input source (such as a personal computer) are also required. 
+In order to use this demo, a [Pmod I2S2](https://digilent.com/reference/pmod/pmodi2s2/start) and one of the Digilent FPGA development boards presented in the table below are required. In addition, headphones or speakers and an audio input source (such as a personal computer) are also required. 
 
 This project is supported in versions of Vivado >= 2017.4. Releases are currently provided only for 2017.4 and 2018.2.
 
@@ -8,13 +8,13 @@ The table below describes how inputs and outputs to this demo are connected, dep
 
 | Board (Resource Center Link) | I2S2 Pmod Connector | Volume Input | Reset        |
 | ---------------------------- | ------------------- | ------------ | ------------ |
-| [Arty A7-35](https://reference.digilentinc.com/reference/programmable-logic/arty/start)     | JA                  | SW3-SW0      | RESET Button |
-| [Arty A7-100](https://reference.digilentinc.com/reference/programmable-logic/arty/start)    | JA                  | SW3-SW0      | RESET Button |
-| [Arty S7-25](https://reference.digilentinc.com/reference/programmable-logic/arty-s7/start)  | JA                  | SW3-SW0      | RESET Button |
-| [Arty S7-50](https://reference.digilentinc.com/reference/programmable-logic/arty-s7/start)  | JA                  | SW3-SW0      | RESET Button |
-| [Cora Z7-07S](https://reference.digilentinc.com/reference/programmable-logic/cora-z7/start) | JA                  | BTN0         | BTN1         |
-| [Cora Z7-10](https://reference.digilentinc.com/reference/programmable-logic/cora-z7/start)  | JA                  | BTN0         | BTN1         |
-| [Cmod S7-25](https://reference.digilentinc.com/reference/programmable-logic/cmod-s7/start)  | JA                  | BTN0         | BTN1         |
+| [Arty A7-35](https://digilent.com/reference/programmable-logic/arty-a7/start)   | JA                  | SW3-SW0      | RESET Button |
+| [Arty A7-100](https://digilent.com/reference/programmable-logic/arty-a7/start)  | JA                  | SW3-SW0      | RESET Button |
+| [Arty S7-25](https://digilent.com/reference/programmable-logic/arty-s7/start)   | JA                  | SW3-SW0      | RESET Button |
+| [Arty S7-50](https://digilent.com/reference/programmable-logic/arty-s7/start)   | JA                  | SW3-SW0      | RESET Button |
+| [Cora Z7-07S](https://digilent.com/reference/programmable-logic/cora-z7/start)  | JA                  | BTN0         | BTN1         |
+| [Cora Z7-10](https://digilent.com/reference/programmable-logic/cora-z7/start)   | JA                  | BTN0         | BTN1         |
+| [Cmod S7-25](https://digilent.com/reference/programmable-logic/cmod-s7/start)   | JA                  | BTN0         | BTN1         |
 
 This project is formatted a little differently than the standard Digilent Github project.
 
